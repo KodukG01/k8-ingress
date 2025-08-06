@@ -57,7 +57,7 @@ metadata:
     alb.ingress.kubernetes.io/group.name: gautamjames
 spec:
   rules:
-  - hosts:
+  - hosts: "app1.devsecops.fun"
     http:
       paths:
       - pathType: Prefix
