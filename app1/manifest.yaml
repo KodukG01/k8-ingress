@@ -56,14 +56,15 @@ metadata:
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/group.name: gautamjames
 spec:
+  ingressClassName: alb
   rules:
-  - hosts: "app1.devsecops.fun"
+  - host: "app1.devsecops.fun"
     http:
       paths:
       - pathType: Prefix
         path: "/"
         backend:
-          services:
+          service:
             name: app1
             ports:
               number: 80
